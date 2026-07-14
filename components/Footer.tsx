@@ -37,10 +37,14 @@ export default function Footer() {
       <div className="footer-bottom">
         <div className="footer-bottom-inner">
           <span>(C) 2026 GHOSTATLASIP.COM</span>
-          <span className="footer-status">
-            <span className="footer-status-dot" />
-            ALL SYSTEMS OPERATIONAL
-          </span>
+          <a
+            className="footer-planckmx"
+            href="https://planckmx.tech"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            PLANCKMX
+          </a>
         </div>
       </div>
     </footer>
