@@ -16,16 +16,16 @@ export default function Footer() {
         </div>
         <div className="footer-col">
           <span className="footer-col-title">PRODUCTS</span>
-          <a href="#products">Rotating Residential</a>
-          <a href="#products">Static Datacenter</a>
-          <a href="#products">Static ISP</a>
-          <a href="#products">Static Mobile</a>
+          <a href="/#products">Rotating Residential</a>
+          <a href="/#products">Static Datacenter</a>
+          <a href="/#products">Static ISP</a>
+          <a href="/#products">Static Mobile</a>
         </div>
         <div className="footer-col">
           <span className="footer-col-title">LEGAL</span>
-          <a href={LEGACY_APP_URL}>Terms of Service</a>
-          <a href={LEGACY_APP_URL}>Privacy Policy</a>
-          <a href={LEGACY_APP_URL}>Acceptable Use Policy</a>
+          <a href="/legal/terms">Terms of Service</a>
+          <a href="/legal/privacy">Privacy Policy</a>
+          <a href="/legal/acceptable-use">Acceptable Use Policy</a>
         </div>
         <div className="footer-col">
           <span className="footer-col-title">SUPPORT</span>
