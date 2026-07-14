@@ -32,7 +32,7 @@ export default function Pricing() {
           ))}
         </div>
 
-        <div className="tiers-grid">
+        <div className="tiers-grid" data-single={active.tiers.length === 1}>
           {active.tiers.map((tier) => (
             <div className="tier-card" data-popular={!!tier.popular} key={tier.name}>
               {tier.popular && <span className="tier-popular-badge">POPULAR</span>}
@@ -50,13 +50,17 @@ export default function Pricing() {
                   </div>
                 ))}
               </div>
-              <a
-                href={orderUrl(active.slug, tier.name.toLowerCase())}
-                className="tier-cta"
-                data-popular={!!tier.popular}
-              >
-                {tier.cta}
-              </a>
+              {active.comingSoon ? (
+                <span className="tier-cta tier-cta--disabled">Coming Soon</span>
+              ) : (
+                <a
+                  href={orderUrl(active.slug, tier.name.toLowerCase())}
+                  className="tier-cta"
+                  data-popular={!!tier.popular}
+                >
+                  {tier.cta}
+                </a>
+              )}
             </div>
           ))}
         </div>

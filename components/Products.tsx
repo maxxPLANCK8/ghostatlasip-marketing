@@ -19,11 +19,15 @@ export default function Products() {
             <p className="product-desc">{p.desc}</p>
             <div className="product-footer">
               <div>
-                <span className="product-price-label">from </span>
+                {!p.flatPrice && <span className="product-price-label">from </span>}
                 <span className="product-price">{p.price}</span>
                 <span className="product-price-label">{p.unit}</span>
               </div>
-              <a href={orderUrl(p.slug)} className="product-buy">Buy</a>
+              {p.comingSoon ? (
+                <span className="product-buy product-buy--disabled">Coming Soon</span>
+              ) : (
+                <a href={orderUrl(p.slug)} className="product-buy">Buy</a>
+              )}
             </div>
           </div>
         ))}

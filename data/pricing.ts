@@ -11,6 +11,7 @@ export type Tier = {
 export type ProductPricing = {
   label: string;
   slug: string;
+  comingSoon?: boolean;
   tiers: Tier[];
 };
 
@@ -80,6 +81,7 @@ export const pricingData: ProductPricing[] = [
   {
     label: "Static Residential ISP",
     slug: "static-isp",
+    comingSoon: true,
     tiers: [
       {
         name: "Starter",
@@ -111,31 +113,15 @@ export const pricingData: ProductPricing[] = [
   {
     label: "Static Mobile",
     slug: "static-mobile",
+    comingSoon: true,
     tiers: [
       {
-        name: "Starter",
-        sub: "Single carrier lines",
-        price: "$8.00",
-        unit: "/ IP / mo",
-        features: ["1-4 IPs", "4G / 5G carrier IPs", "IP rotation on demand", "HTTP & SOCKS5"],
-        cta: "Start with 1 IP",
-      },
-      {
-        name: "Scale",
-        sub: "Social & ad ops",
+        name: "Flat rate",
+        sub: "One simple monthly rate",
         price: "$14.00",
         unit: "/ IP / mo",
-        popular: true,
-        features: ["5-19 IPs", "Everything in Starter", "Carrier selection", "Priority support"],
-        cta: "Choose Scale",
-      },
-      {
-        name: "Volume",
-        sub: "Agency scale",
-        price: "$5.90",
-        unit: "/ IP / mo",
-        features: ["20 IPs+", "Everything in Scale", "Dedicated modems", "Custom rotation API"],
-        cta: "Choose Volume",
+        features: ["4G / 5G carrier IPs", "IP rotation on demand", "HTTP & SOCKS5"],
+        cta: "Coming Soon",
       },
     ],
   },
@@ -145,6 +131,8 @@ export type ProductSummary = {
   tag: string;
   name: string;
   slug: string;
+  comingSoon?: boolean;
+  flatPrice?: boolean;
   desc: string;
   price: string;
   unit: string;
@@ -171,6 +159,7 @@ export const products: ProductSummary[] = [
     tag: "IP-BASED",
     name: "Static Residential ISP",
     slug: "static-isp",
+    comingSoon: true,
     desc: "Datacenter speed with genuine ISP ASNs. The trust of residential, the reliability of static.",
     price: "$3.50",
     unit: "/IP/mo",
@@ -179,6 +168,8 @@ export const products: ProductSummary[] = [
     tag: "IP-BASED",
     name: "Static Mobile",
     slug: "static-mobile",
+    comingSoon: true,
+    flatPrice: true,
     desc: "Real 4G/5G carrier IPs with on-demand rotation. The highest trust tier for the hardest targets.",
     price: "$14.00",
     unit: "/IP/mo",
