@@ -65,7 +65,3 @@ We may update these Terms from time to time. Material changes will be communicat
 ## 13. Contact
 
 Questions about these Terms can be sent to support@ghostatlasip.com.
-
----
-
-*This document is a template and has not been reviewed by a licensed attorney. It should be reviewed by qualified legal counsel before publication, particularly regarding liability limitations, consumer protection compliance, and jurisdiction-specific requirements for clients outside Kenya.*

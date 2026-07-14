@@ -58,7 +58,3 @@ We reserve sole discretion in determining the severity of a violation and the ap
 ## 7. Changes to This Policy
 
 We may update this AUP as our Service, upstream partnerships, or legal obligations evolve. Material changes will be communicated via email or dashboard notice.
-
----
-
-*This document is a template and has not been reviewed by a licensed attorney. Acceptable use and prohibited-conduct language should be reviewed by qualified legal counsel, particularly the CSAM/illegal content provisions, which may carry specific statutory reporting obligations depending on jurisdiction.*

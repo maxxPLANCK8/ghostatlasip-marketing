@@ -73,7 +73,3 @@ We may update this Privacy Policy from time to time. Material changes will be co
 ## 11. Contact
 
 For privacy-related questions or requests, contact us at support@ghostatlasip.com.
-
----
-
-*This document is a template and has not been reviewed by a licensed attorney or data protection specialist. Given GhostAtlas IP's international client base, this policy should be reviewed for compliance with the Kenya Data Protection Act, 2019, and, depending on where clients are located, other applicable frameworks such as GDPR or CCPA, before publication.*
