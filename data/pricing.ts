@@ -1,8 +1,9 @@
 export type Tier = {
   name: string;
+  slug: string;
   sub: string;
   price: string;
-  unit: string;
+  unit?: string;
   popular?: boolean;
   features: string[];
   cta: string;
@@ -11,7 +12,6 @@ export type Tier = {
 export type ProductPricing = {
   label: string;
   slug: string;
-  comingSoon?: boolean;
   tiers: Tier[];
 };
 
@@ -22,6 +22,7 @@ export const pricingData: ProductPricing[] = [
     tiers: [
       {
         name: "Starter",
+        slug: "starter",
         sub: "Testing & small jobs",
         price: "$8.00",
         unit: "/ GB",
@@ -30,6 +31,7 @@ export const pricingData: ProductPricing[] = [
       },
       {
         name: "Scale",
+        slug: "scale",
         sub: "Production scraping",
         price: "$5.00",
         unit: "/ GB",
@@ -39,6 +41,7 @@ export const pricingData: ProductPricing[] = [
       },
       {
         name: "Volume",
+        slug: "volume",
         sub: "Heavy pipelines",
         price: "$4.00",
         unit: "/ GB",
@@ -53,58 +56,28 @@ export const pricingData: ProductPricing[] = [
     tiers: [
       {
         name: "Starter",
-        sub: "A handful of IPs",
-        price: "$2.40",
-        unit: "/ IP / mo",
-        features: ["5+ IPs", "20+ locations", "Unlimited bandwidth", "HTTP & SOCKS5"],
-        cta: "Start with 5 IPs",
+        slug: "starter",
+        sub: "5 IPs included",
+        price: "$12.00/mo",
+        features: ["5 IPs included", "20+ locations", "Unlimited bandwidth", "HTTP & SOCKS5"],
+        cta: "Choose Starter",
       },
       {
-        name: "Scale",
-        sub: "Growing operations",
-        price: "$2.00",
-        unit: "/ IP / mo",
+        name: "IPv4",
+        slug: "ipv4",
+        sub: "10 IPs included",
+        price: "$20.00/mo",
         popular: true,
-        features: ["10+ IPs", "Everything in Starter", "Subnet diversity", "Instant replacement"],
-        cta: "Choose Scale",
+        features: ["10 IPs included", "Everything in Starter", "Subnet diversity", "Instant replacement"],
+        cta: "Choose IPv4",
       },
       {
-        name: "Volume",
-        sub: "Bulk deployments",
-        price: "$1.75",
-        unit: "/ IP / mo",
-        features: ["20+ IPs", "Everything in Scale", "Custom /24 blocks", "API bulk management"],
-        cta: "Choose Volume",
-      },
-    ],
-  },
-  {
-    label: "Static Residential ISP",
-    slug: "static-isp",
-    comingSoon: true,
-    tiers: [
-      {
-        name: "Flat rate",
-        sub: "One simple monthly rate",
-        price: "$3.50",
-        unit: "/ IP / mo",
-        features: ["Real ISP ASNs", "Unlimited bandwidth", "Sticky forever"],
-        cta: "Coming Soon",
-      },
-    ],
-  },
-  {
-    label: "Static Mobile",
-    slug: "static-mobile",
-    comingSoon: true,
-    tiers: [
-      {
-        name: "Flat rate",
-        sub: "One simple monthly rate",
-        price: "$14.00",
-        unit: "/ IP / mo",
-        features: ["4G / 5G carrier IPs", "IP rotation on demand", "HTTP & SOCKS5"],
-        cta: "Coming Soon",
+        name: "Pro",
+        slug: "pro",
+        sub: "20 IPs included",
+        price: "$35.00/mo",
+        features: ["20 IPs included", "Everything in IPv4", "Custom /24 blocks", "API bulk management"],
+        cta: "Choose Pro",
       },
     ],
   },

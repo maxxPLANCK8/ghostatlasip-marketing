@@ -40,7 +40,7 @@ export default function Pricing() {
               <p className="tier-sub">{tier.sub}</p>
               <div className="tier-price-row">
                 <span className="tier-price">{tier.price}</span>
-                <span className="tier-unit"> {tier.unit}</span>
+                {tier.unit && <span className="tier-unit"> {tier.unit}</span>}
               </div>
               <div className="tier-features">
                 {tier.features.map((f) => (
@@ -50,17 +50,13 @@ export default function Pricing() {
                   </div>
                 ))}
               </div>
-              {active.comingSoon ? (
-                <span className="tier-cta tier-cta--disabled">Coming Soon</span>
-              ) : (
-                <a
-                  href={orderUrl(active.slug, tier.name.toLowerCase())}
-                  className="tier-cta"
-                  data-popular={!!tier.popular}
-                >
-                  {tier.cta}
-                </a>
-              )}
+              <a
+                href={orderUrl(active.slug, tier.slug)}
+                className="tier-cta"
+                data-popular={!!tier.popular}
+              >
+                {tier.cta}
+              </a>
             </div>
           ))}
         </div>
